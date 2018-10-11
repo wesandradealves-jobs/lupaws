@@ -1,0 +1,35 @@
+.navigation
+	>ul
+		align-items: center
+		@extend .flex 
+		flex-flow: row wrap 
+		justify-content: flex-end 
+		>li 
+			color: $marine-blue
+			flex: 0 0 auto 
+			&:nth-last-child(2)
+				display: none 
+				+mq(568px, max)
+					margin-right: 0
+			+mq(737px, max)
+				&:not(:last-child):not(:nth-last-child(2))
+					display: none
+				&:nth-last-child(2)
+					display: inline-block
+				+mq(568px, max)
+					&:last-child
+						display: none
+			&:not(.language-bar)
+				&:not(:last-child)
+					margin-right: calc(47px - 8px)
+					+mq(940px, max)
+						margin-right: 15px
+				>a 
+					@extend .btn
+					width: 94px
+					+mq(940px, max)
+						width: auto
+					&:hover,
+					&.active
+						@extend .btn-1	
+
