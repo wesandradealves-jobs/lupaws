@@ -1,0 +1,189 @@
+    {
+        "languages" : [
+            {
+                "id" : "0",
+                "slug" : "portugues",
+                "label" : "Português"
+            },
+            {
+                "id" : "1",
+                "slug" : "ingles",
+                "label" : "Inglês"
+            }            
+        ],
+        "customizer" : [
+            {
+                "site_name" : "Lupa WBS",
+                "logo" : "assets/imgs/logo.jpg",
+                "favico" : "favico.png",
+                "screenshot" : "screenshot.jpg",
+                "copyright" : "©2018 - Todos direitos reservados a Lupatech"
+            }
+        ], 
+        "menu":[
+            {
+                "id" : "0",
+                "text" : "Home",
+                "url" : "javascript:void(0)",
+                "slug" : "home",
+                "title" : "Home",
+                "sections" : [
+                    {
+                        "banner" : [
+                            {
+                                "id" : "0",
+                                "class" : "banner",
+                                "slug" : "banner",
+                                "content" : [
+                                    {
+                                        "title" : "<img src='assets/imgs/logo-reduzido.jpg' /> Lupa WBS",
+                                        "text" : "Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí. Mas também, pra que levar a sério um texto que não diz nada ou mulheres que são minoria?",
+                                        "btn" : [
+                                            {
+                                                "label" : "Veja como contratar <i class='ico fa fa-angle-right'></i>",
+                                                "url" : "#"
+                                            }
+                                        ],
+                                        "imgs" : [
+                                            {
+                                                "id" : "0",
+                                                "class" : "magnifying_glass",
+                                                "src" : "assets/imgs/lupa.svg",
+                                                "title" : "Lupa WBS",
+                                                "data-depth" : "0.5"
+                                            },
+                                            {
+                                                "id" : "1",
+                                                "class" : "magnifying_glass_inner",
+                                                "src" : "assets/imgs/lupa-inner.png",
+                                                "title" : "Lupa WBS",
+                                                "data-depth" : "0.3"
+                                            }
+                                        ]                                                                 
+                                    }
+                                ]                                
+                            }
+                        ],
+                        "projetos" : [
+                            {
+                                "id" : "1",
+                                "class" : "projetos",
+                                "slug" : "projetos",
+                                "content" : [ 
+                                    {
+                                        "title" : "A Lupa WBS ajuda a<br/>organizar seus projetos",
+                                        "text" : "Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí. Mas também, pra que levar a sério um texto que não diz nada ou mulheres que são minoria? ",
+                                        "btn" : [
+                                            {
+                                                "label" : "Conheça mais sobre o LUPA WBS <i class='ico fa fa-angle-right'></i>",
+                                                "url" : "#"
+                                            }
+                                        ],
+                                        "imgs" : [
+                                            {
+                                                "id" : "0",
+                                                "class" : "",
+                                                "src" : "assets/imgs/screenshot1.jpg",
+                                                "title" : "Visão Lista",
+                                                "data-depth" : ""
+                                            },
+                                            {
+                                                "id" : "1",
+                                                "class" : "",
+                                                "src" : "assets/imgs/screenshot2.jpg",
+                                                "title" : "Visão WBS",
+                                                "data-depth" : ""
+                                            }
+                                        ] 
+                                    }
+                                ]                                
+                            }
+                        ],
+                        "comece-agora" : [
+                            {
+                                "id" : "2",
+                                "class" : "comece-agora",
+                                "slug" : "comece-agora",
+                                "content" : [ 
+                                    {
+                                        "title" : "Comece agora a usar o <img src='assets/imgs/logo-app-escura.jpg' /> Lupa WBS <br/> e aproveite melhor seu Trello.",
+                                        "text" : "",
+                                        "btn" : [
+                                            {
+                                                "label" : "Contrate Agora <i class='ico fa fa-angle-right'></i>",
+                                                "url" : "#"
+                                            }
+                                        ],
+                                        "imgs" : []                                        
+                                    }
+                                ]
+                            }
+                        ],
+                        "branding" : [
+                            {
+                                "id" : "3",
+                                "class" : "branding",
+                                "slug" : "branding",
+                                "content" : [ 
+                                    {
+                                        "title" : "Trello Lupa WBS",
+                                        "text" : "'Unindo o melhor dos dois mundos'",
+                                        "btn" : [],
+                                        "imgs" : []                                        
+                                    }
+                                ]
+                            }
+                        ]                                                                         
+                    }
+                ]
+            },
+            {
+                "id" : "1",
+                "text" : "Sobre",
+                "url" : "javascript:void(0)",
+                "slug" : "sobre",
+                "title" : "Sobre",
+                "sections" : [
+                    {
+                        "banner" : [
+                            {
+                                "id" : "0",
+                                "class" : "banner",
+                                "slug" : "banner",
+                                "content" : [
+                                    {
+                                        "title" : "Organize fácil<br/>seus projetos",
+                                        "text" : "Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí. Mas também, pra que levar a sério um texto que não diz nada ou mulheres que são minoria?",
+                                        "btn" : [],
+                                        "imgs" : [
+                                            {
+                                                "id" : "0",
+                                                "class" : "magnifying_glass",
+                                                "src" : "assets/imgs/lupa-completa.svg",
+                                                "title" : "Lupa WBS",
+                                                "data-depth" : "0.5"
+                                            }
+                                        ]                                                                 
+                                    }
+                                ]                                
+                            }
+                        ]                                                                         
+                    }
+                ]
+            },
+            {
+                "id" : "2",
+                "text" : "Preços",
+                "url" : "javascript:void(0)",
+                "slug" : "precos",
+                "title" : "Preços"
+            },
+            {
+                "id" : "3",
+                "text" : "Contato",
+                "url" : "javascript:void(0)",
+                "slug" : "contato",
+                "title" : "Contato"
+            }                                       
+        ]
+    }

@@ -13,6 +13,7 @@ function _mobileNavigation(){
 
 $(document).ready(function () {
 	combobox();
+	navigation();
 	new Parallax($magnifying_glass);
 });
       

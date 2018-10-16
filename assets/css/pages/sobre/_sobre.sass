@@ -1,0 +1,54 @@
+.pg-sobre
+	.webdoor
+		.divisor
+			+mq(1040px, min)
+				background-color: $pool-blue
+				bottom: -47px
+				display: block
+				height: 5px
+				left: calc(50% - 509.1px/2) 
+				position: absolute
+				width: 509.1px
+				&::after,
+				&::before 
+					background-color: $pool-blue
+					content: ""
+					height: 50px 
+					position: absolute 
+					width: 5px 
+				&::before 
+					right: 0
+					bottom: 0 
+				&::after 
+					top: 0
+					left: 0 
+		& ~ .webdoor
+			&:not(:last-child) 
+				+mq(1040px, min)
+					margin-bottom: 92px
+			&:nth-child(odd)
+				.divisor
+					&::before 
+						bottom: initial 
+						top: 0
+					&::after 
+						bottom: 0 
+						top: initial
+				+mq(1040px, min)
+					.container
+						flex-direction: row-reverse
+						>div 
+							&:first-of-type
+								padding-right: 0
+							&:last-of-type
+								padding-right: 40px
+								+mq(1040px, max)
+									padding-right: 0
+		&:first-of-type
+			.container
+				&::after
+					bottom: 0
+					content: url(assets/imgs/lupa4.jpg)
+					display: block 
+					left: -70px
+					position: absolute 

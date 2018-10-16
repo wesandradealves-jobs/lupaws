@@ -1,80 +1,44 @@
 .webdoor
-	.container
-		align-items: center
+	&-detail
+		align-items: center 
 		@extend .flex 
 		flex-flow: row wrap 
-		justify-content: center
-		max-width: 100%
-		padding-right: 0
-		padding-left: 131px
-		+mq(1280px, max)
-			max-width: 1048px
-			padding-left: 15px
-			+mq(837px, max)
-				margin-top: -92px
-				padding-top: 32px
-				padding-right: 15px
-				height: 100vh
-				+mq(737px, max)
-					margin-top: -94px
-					padding-top: 34px
-		>div 
-			flex: 1
-			&:first-of-type
-				flex: 0 0 auto
-				padding-right: 40px
-				width: 44vw
+		height: 527px
+		justify-content: center 
+		position: relative
+		>.magnifying_glass
+			height: 427px
+			width: auto
+			z-index: 2
+			&_inner
+				display: block
+				height: 160px
+				width: autoo
 				+mq(1280px, max)
-					width: 445px
-					+mq(837px, max)
-						&+div 
-							display: none
-						padding-right: 0
-						text-align: center 
-						width: 100%
-						>.btn 
-							display: inline-block
-			>.btn 
-				max-width: 200px
-			>.webdoor-detail
-				align-items: center 
-				@extend .flex 
-				flex-flow: row wrap 
-				height: 527px
-				justify-content: center 
-				position: relative
-				>.magnifying_glass 
-					max-width: 700px
-					width: 100%
-					z-index: 2
-					&_inner
-						display: block
-						height: 160px
-						+mq(1280px, max)
-							height: 12vw
-						left: calc(50% - 440px/2) !important
-						position: absolute 
-						top: calc(50% - 160px/2) !important
-						+mq(1280px, max)
-							left: calc(50% - 34vw/2) !important
-							top: calc(50% - 12vw/2) !important
-						z-index: 1
+					height: 12vw
+				left: calc(50% - 440px/2) !important
+				position: absolute 
+				top: calc(50% - 160px/2) !important
+				+mq(1280px, max)
+					left: calc(50% - 34vw/2) !important
+					top: calc(50% - 12vw/2) !important
+				z-index: 1
 .projetos
 	.container
 		text-align: center
-		+mq(837px, max)
+		+mq(1040px, max)
 			padding-top: 60px
 			padding-bottom: 60px
 		.screenshots
 			align-items: stretch 
 			@extend .flex 
 			flex-flow: row wrap 
-			+mq(837px, max)
+			+mq(1040px, max)
 				flex-flow: column wrap
 			margin: 0 -110px
 			+mq(980px, max)
 				margin: 0 -50px
-				+mq(837px, max)
+				+mq(1040px, max)
 					margin: 0 0
 					padding-left: 30px 
 					padding-right: 30px
@@ -83,16 +47,18 @@
 				padding: 0 110px
 				+mq(980px, max)
 					padding: 0 50px
-					+mq(837px, max)
+					+mq(1040px, max)
 						padding: 0 0
 						&:not(:last-child)
 							margin-bottom: 50px
 						>div 
 							width: 100%!important
+				>img 
+					margin: 0 auto 
 		.btn 
 			display: inline-block
 			margin: 45px auto 90px
-			+mq(837px, max)
+			+mq(1040px, max)
 				margin: 45px auto 0
 .comece-agora
 	background-color: $marine-blue-two
@@ -106,7 +72,7 @@
 			padding-left: 30px
 			padding-right: 30px
 		justify-content: space-between 
-		max-width: 100%
+		max-width: 1440px
 		padding-right: 0
 		padding-left: 131px
 		padding-top: 30px
@@ -120,12 +86,6 @@
 				flex: 0 0 auto
 				justify-content: flex-start 
 				width: 730px
-				+mq(1540px, min)
-					flex: 0 0 auto
-					width: auto
-					.title 
-						br 
-							display: none
 				+mq(1080px, max)
 					justify-content: center
 					padding-bottom: 30px
