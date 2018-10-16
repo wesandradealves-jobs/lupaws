@@ -1,5 +1,5 @@
 function combobox(){
-	if($('[combobox]').length)
+	if($('[combobox]').length){
 		var $this = $('[combobox]'),
 			$options = $this.children('ul'),
 			$handler = $this.children('a');
@@ -49,4 +49,5 @@ function combobox(){
 		});	    
 
 		selVal();
+	}
 }

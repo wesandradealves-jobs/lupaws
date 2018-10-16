@@ -32,7 +32,6 @@ const gulp = require('gulp'),
 
 var development = environments.development,
     production = environments.production;
-    
 
 // SASS / CSS generator 
 gulp.task('sass', function() {
