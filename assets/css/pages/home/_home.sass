@@ -1,0 +1,120 @@
+.webdoor
+	&-detail
+		align-items: center 
+		@extend .flex 
+		flex-flow: row wrap 
+		height: 527px
+		justify-content: center 
+		position: relative
+		>.magnifying_glass
+			height: 427px
+			width: auto
+			z-index: 2
+			&_inner
+				display: block
+				height: 160px
+				width: autoo
+				+mq(1280px, max)
+					height: 12vw
+				left: calc(50% - 440px/2) !important
+				position: absolute 
+				top: calc(50% - 160px/2) !important
+				+mq(1280px, max)
+					left: calc(50% - 34vw/2) !important
+					top: calc(50% - 12vw/2) !important
+				z-index: 1
+.projetos
+	.container
+		text-align: center
+		+mq(1040px, max)
+			padding-top: 60px
+			padding-bottom: 60px
+		.screenshots
+			align-items: stretch 
+			@extend .flex 
+			flex-flow: row wrap 
+			+mq(1040px, max)
+				flex-flow: column wrap
+			margin: 0 -110px
+			+mq(980px, max)
+				margin: 0 -50px
+				+mq(1040px, max)
+					margin: 0 0
+					padding-left: 30px 
+					padding-right: 30px
+			justify-content: center
+			>div 
+				padding: 0 110px
+				+mq(980px, max)
+					padding: 0 50px
+					+mq(1040px, max)
+						padding: 0 0
+						&:not(:last-child)
+							margin-bottom: 50px
+						>div 
+							width: 100%!important
+				>img 
+					margin: 0 auto 
+		.btn 
+			display: inline-block
+			margin: 45px auto 90px
+			+mq(1040px, max)
+				margin: 45px auto 0
+.comece-agora
+	background-color: $marine-blue-two
+	color: white 
+	.container
+		align-items: stretch
+		@extend .flex 
+		flex-flow: row wrap 
+		+mq(1080px, max)
+			flex-flow: column wrap
+			padding-left: 30px
+			padding-right: 30px
+		justify-content: space-between 
+		max-width: 1440px
+		padding-right: 0
+		padding-left: 131px
+		padding-top: 30px
+		padding-bottom: 30px
+		>div 
+			align-items: center 
+			flex: 1
+			@extend .flex 
+			justify-content: center
+			&:first-of-type
+				flex: 0 0 auto
+				justify-content: flex-start 
+				width: 730px
+				+mq(1080px, max)
+					justify-content: center
+					padding-bottom: 30px
+					text-align: center 
+					width: 100%
+	.title 
+		color: inherit
+.branding 
+	.container 
+		padding-top: 90px
+		padding-bottom: 90px
+		text-align: center 
+		[data-subtitle]
+			color: $pale-grey
+			@extend .logo
+			+rem('font-size', 100px)
+			+mq(768px, max)
+				+rem('font-size', 13vw)
+				+mq(568px, max)
+					+rem('font-size', 12vw)
+			position: relative 
+			&::after 
+				content: attr(data-subtitle)
+				color: $marine-blue-two
+				display: block
+				font-family: 'Nothing You Could Do', cursive
+				font-size: 30%
+				left: 0
+				position: absolute
+				text-align: center 
+				top: calc(50% - 5px)
+				width: 100%
