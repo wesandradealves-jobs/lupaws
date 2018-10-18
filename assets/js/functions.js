@@ -58,7 +58,9 @@ $(document).ready(function () {
         }); 
         event.preventDefault();
     }); 
-	$('.telefone').mask('(00) 0000-0000');
+    if($('.telefone').length){
+        $('.telefone').mask('(00) 0000-0000');
+    }
 	combobox();
 	navigation();
 	faq();
