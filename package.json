@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "install": "^0.12.2",
+    "jquery-mask-plugin": "^1.14.15",
     "npm": "^6.4.1",
     "parallax-js": "^3.1.0",
     "perfect-scrollbar": "^1.4.0"

@@ -19,4 +19,9 @@ function navigation(){
     $(window).scroll(function(event){
     	windowScroll();
     });   
+    $( 'section' ).each(function() {
+    	if($(this).index() == 0){
+	        $(this).addClass('animated');
+    	} 
+    });	
 }

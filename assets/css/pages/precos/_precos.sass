@@ -4,6 +4,12 @@
         .title
             text-align: center
         .price-boxes
+            &::after
+                top: -55px
+                content: url(assets/imgs/lupa.png)
+                display: block
+                right: -70px
+                position: absolute
             .divisor
                 +mq(1180px, max)
                     display: none
@@ -114,7 +120,7 @@
                         .price-box-description
                             padding: 17px 60px
                     .price-box-inner
-                        +shadow(0px,0px,20px,-10px,black)
+                        +shadow(0,0,50px,-10px,$marine-blue)
                         border: 2px rgba(255,255,255,0) solid
                         border-radius: 55px
                         overflow: hidden
@@ -129,6 +135,7 @@
         .title
             +rem('font-size', 40px)
             &+p 
+                color: $marine-blue
                 max-width: 541px
                 +rem(('font-size':18px, 'letter-spacing':-.2px, 'line-height':28px))
                 padding: 23px 0 35px

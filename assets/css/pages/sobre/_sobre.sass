@@ -1,13 +1,16 @@
 .pg-sobre
 	.webdoor
+		margin: -90px auto 170px
+		+mq(1040px, max)
+			margin: 0 auto
 		.divisor
 			+mq(1040px, min)
 				background-color: $pool-blue
-				bottom: -47px
 				display: block
-				height: 5px
+				height: 10px
 				left: calc(50% - 509.1px/2) 
-				position: absolute
+				margin: 40px 0 130px
+				position: relative 
 				width: 509.1px
 				&::after,
 				&::before 
@@ -15,7 +18,7 @@
 					content: ""
 					height: 50px 
 					position: absolute 
-					width: 5px 
+					width: 10px 
 				&::before 
 					right: 0
 					bottom: 0 
@@ -23,6 +26,10 @@
 					top: 0
 					left: 0 
 		& ~ .webdoor
+			&:last-child 
+				margin-top: 92px
+				+mq(1040px, max)
+					margin-top: 0
 			&:not(:last-child) 
 				+mq(1040px, min)
 					margin-bottom: 92px
@@ -47,8 +54,10 @@
 		&:first-of-type
 			.container
 				&::after
-					bottom: 0
+					bottom: -120px
 					content: url(assets/imgs/lupa4.jpg)
 					display: block 
+					+mq(1040px, max)
+						display: none
 					left: -70px
 					position: absolute 

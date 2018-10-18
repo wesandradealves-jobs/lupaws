@@ -1,22 +1,22 @@
 textarea,
 input
     &[placeholder]
-        color: lightgray
+        color: $marine-blue
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
     &::-moz-placeholder
-        color: lightgray
+        color: $marine-blue
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
     &::-webkit-input-placeholder
-        color: lightgray
+        color: $marine-blue
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
     &:-ms-input-placeholder 
-        color: lightgray
+        color: $marine-blue
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
@@ -27,7 +27,6 @@ input
         @extend .flex 
         flex-flow: row wrap 
         justify-content: center
-        max-width: 1440px
         +mq(1280px, max)
             max-width: 1048px
             +mq(1040px, max)
@@ -79,7 +78,8 @@ img
     max-width: 100%
 
 #wrap
-    min-height: 100vh
+    min-height: calc(100vh - 46px)
+    padding-bottom: 46px
     overflow: hidden
 
 .logo 
@@ -102,6 +102,9 @@ img
         +rem(('font-size':11px,'letter-spacing':-.2px))
         text-transform: uppercase
         +shadow(0px,3px,25px,-6px,black)
+    &.btn-2
+        background-color: $robins-egg-blue
+        color: white
 .loading
     background-color: $marine-blue
     align-items: center
