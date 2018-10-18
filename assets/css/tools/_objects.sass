@@ -1,25 +1,65 @@
 textarea,
 input
     &[placeholder]
-        color: lightgray
+        color: $marine-blue
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
     &::-moz-placeholder
-        color: lightgray
+        color: $marine-blue
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
     &::-webkit-input-placeholder
-        color: lightgray
+        color: $marine-blue
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
     &:-ms-input-placeholder 
-        color: lightgray
+        color: $marine-blue
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
+
+.webdoor
+    .container
+        align-items: center
+        @extend .flex 
+        flex-flow: row wrap 
+        justify-content: center
+        +mq(1280px, max)
+            max-width: 1048px
+            +mq(1040px, max)
+                margin-top: -92px
+                padding-top: 32px
+                height: 100vh
+                +mq(737px, max)
+                    margin-top: -94px
+                    padding-top: 34px
+        >div 
+            flex: 1
+            &:first-of-type
+                flex: 0 0 auto
+                padding-right: 40px
+                width: 445px
+                +mq(1040px, max)
+                    &+div 
+                        display: none
+                    padding-right: 0
+                    text-align: center 
+                    width: 100%
+                    >.btn 
+                        display: inline-block
+            &:only-of-type
+                padding-left: 0 
+                padding-right: 0
+                text-align: center
+                width: 100%
+                >.btn 
+                    display: block
+                    margin: 45px auto 0
+            >.btn 
+                max-width: 200px
 
 .flex  
     display: -webkit-box
@@ -34,8 +74,12 @@ input
     padding-left: 15px
     padding-right: 15px
 
+img 
+    max-width: 100%
+
 #wrap
-    min-height: 100vh
+    min-height: calc(100vh - 46px)
+    padding-bottom: 46px
     overflow: hidden
 
 .logo 
@@ -58,6 +102,9 @@ input
         +rem(('font-size':11px,'letter-spacing':-.2px))
         text-transform: uppercase
         +shadow(0px,3px,25px,-6px,black)
+    &.btn-2
+        background-color: $robins-egg-blue
+        color: white
 .loading
     background-color: $marine-blue
     align-items: center
@@ -136,7 +183,7 @@ input
                     top: 45px
                     left: 10px   
 h2
-    +rem('font-size', 64px) 
+    +rem('font-size', 55px) 
     +mq(768px, max)
         +rem('font-size', 7vw)
         +mq(414px, max)
