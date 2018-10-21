@@ -1,0 +1,42 @@
+.navigation
+	>ul 
+		>li 
+			&.wpm-languages
+				color: $cadet-blue
+				position: relative 
+				+rem('font-size', 14px)
+				>a
+					position: relative 
+					&::before
+						content: "Idioma: "
+					&::after
+						content: "\f107"
+						font: normal normal normal 14px/1 FontAwesome
+						margin: 0 5px
+						+transition(500ms)
+					>span
+						&::after
+							background-color: transparentize($marine-blue, .8)
+							bottom: -3px
+							content: ''
+							display: block
+							left: 0 
+							position: absolute 
+							height: 2px
+							width: 100%
+					.fa-angle-down 
+						position: relative 
+						transform: rotate(0deg)
+						margin: 0 3px
+						transform-origin: center center
+						+transition(500ms)
+					&.toggle
+						>a::after
+							transform: rotate(180deg)
+				>.sub-menu
+					display: none 
+					left: 0
+					padding-left: 50px
+					position: absolute
+					top: calc(100% + 5px)
+					width: 200% 
