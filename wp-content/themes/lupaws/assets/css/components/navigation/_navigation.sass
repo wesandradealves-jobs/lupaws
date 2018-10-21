@@ -1,0 +1,58 @@
+.navigation
+	&-mobile
+		background-color: transparentize($marine-blue, .15)
+		align-items: center
+		color: white 
+		// @extend .flex  
+		display: none
+		height: 100%
+		justify-content: center 
+		left: 0
+		position: fixed 
+		top: 0
+		text-align: center 
+		width: 100%
+		z-index: 100
+		>ul 
+			>li 
+				+rem('font-size', 14px)
+				&:not(:last-child)
+					margin-bottom: 15px
+		.wpm-languages
+			display: none
+	>ul
+		align-items: center
+		@extend .flex 
+		flex-flow: row wrap 
+		justify-content: flex-end 
+		>li 
+			color: $marine-blue
+			flex: 0 0 auto 
+			&:last-child
+				display: none 
+				+mq(568px, max)
+					margin-right: 0
+			+mq(737px, max)
+				&:not(:last-child):not(:nth-last-child(2))
+					display: none
+				&:last-child,
+				&:nth-last-child(2)
+					display: inline-block
+				+mq(568px, max)
+					&:nth-last-child(2)
+						display: none
+			&:not(:last-child)
+				margin-right: 7px
+			&:not(.wpm-languages):not(:last-child)
+				>a 
+					@extend .btn
+					width: 94px
+					+mq(940px, max)
+						width: auto
+				&:hover,
+				&.current_page_item
+					&+.wpm-languages
+						margin-left: 25px
+					>a
+						@extend .btn-1	
+
