@@ -11,11 +11,18 @@
 // require("Exception.php");
 // require("OAuth.php");
 
-require_once("PHPMailerAutoload.php");
+require ( dirname(__FILE__).'/../wp-load.php' );
+require_once dirname(__FILE__)."/PHPMailerAutoload.php";
 
-$enviarPara = '';
-$assunto = '';
-$message = '';
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$telefone = ($_POST['telefone']) ? $_POST['telefone'] : '-';
+$mensagem = $_POST['mensagem'];
+//
+$assunto = 'Contato Site #'.$_POST['assunto']. PHP_EOL . PHP_EOL;
+$message = 'E-mail: '.$email. PHP_EOL . PHP_EOL;
+$message .= '<br/>Telefone: '.$telefone. PHP_EOL . PHP_EOL;
+$message .= '<br/>Mensagem: '.$mensagem. PHP_EOL . PHP_EOL;
 
 // use PHPMailer\PHPMailer\PHPMailer;
 //Create a new PHPMailer instance
@@ -28,9 +35,10 @@ $mail->isSMTP();
 // 2 = client and server messages
 $mail->SMTPDebug = 0;
 //Set the hostname of the mail server
+// $mail->Host = 'smtp.kinghost.net';
 $mail->Host = 'smtp.gmail.com';
 // use
-// $mail->Host = gethostbyname('smtp.gmail.com');
+// $mail->Host = gethostbyname('smtp.kinghost.net');
 // if your network does not support SMTP over IPv6
 //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
 $mail->Port = 587;
@@ -39,17 +47,14 @@ $mail->SMTPSecure = 'tls';
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = "wesandradealves@gmail.com";
-//Password to use for SMTP authentication
-$mail->Password = "Wes@03122530";
-$mail->AddCC('wesandradealves@gmail.com', 'Wesley Andrade');
-$mail->AddBCC('', '');
+$mail->Username = 'wesandradealves@gmail.com';
+$mail->Password = 'Wes@03122530';
 //Set who the message is to be sent from
-$mail->setFrom('', '');
+$mail->setFrom($email, $nome);
 //Set an alternative reply-to address
 $mail->addReplyTo($email, $nome);
 //Set who the message is to be sent to
-$mail->addAddress($enviarPara, $assunto);
+$mail->addAddress('wesandradealves@gmail.com', $assunto);
 //Set the subject line
 $mail->Subject = $assunto;
 //Read an HTML message body from an external file, convert referenced images to embedded,
@@ -57,6 +62,7 @@ $mail->Subject = $assunto;
 // $mail->msgHTML(file_get_contents('contents.html'), __DIR__);
 $mail->Subject = $assunto;
 $mail->Body    = $message;
+$mail->isHTML(true);
 $mail->CharSet = 'UTF-8';
 //Replace the plain text body with one created manually
 $mail->AltBody = 'This is a plain-text message body';
@@ -66,12 +72,13 @@ $mail->AltBody = 'This is a plain-text message body';
 if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
-    header("Location: http://precisaoservicos.com.br/");
+    print_r($mail);
+    // header('Location: ' . $_SERVER['HTTP_REFERER']."?sent=true");
     //Section 2: IMAP
     //Uncomment these to save your message in the 'Sent Mail' folder.
-    #if (save_mail($mail)) {
-    #    echo "Message saved!";
-    #}
+    if (save_mail($mail)) {
+       echo "Message saved!";
+    }
 }
 //Section 2: IMAP
 //IMAP commands requires the PHP IMAP Extension, found at: https://php.net/manual/en/imap.setup.php

@@ -1,0 +1,211 @@
+textarea,
+input
+    &[placeholder]
+        color: $marine-blue
+        font-weight: 300
+        opacity: 1
+        text-overflow: ellipsis
+    &::-moz-placeholder
+        color: $marine-blue
+        font-weight: 300
+        opacity: 1
+        text-overflow: ellipsis
+    &::-webkit-input-placeholder
+        color: $marine-blue
+        font-weight: 300
+        opacity: 1
+        text-overflow: ellipsis
+    &:-ms-input-placeholder 
+        color: $marine-blue
+        font-weight: 300
+        opacity: 1
+        text-overflow: ellipsis
+
+.webdoor
+    .container
+        align-items: center
+        @extend .flex 
+        flex-flow: row wrap 
+        justify-content: center
+        +mq(1280px, max)
+            max-width: 1048px
+            +mq(1040px, max)
+                margin-top: -92px
+                padding-top: 32px
+                height: 100vh
+                +mq(737px, max)
+                    margin-top: -94px
+                    padding-top: 34px
+        >div 
+            flex: 1
+            &:first-of-type
+                flex: 0 0 auto
+                padding-right: 40px
+                width: 445px
+                +mq(1040px, max)
+                    &+div 
+                        display: none
+                    padding-right: 0
+                    text-align: center 
+                    width: 100%
+                    >.btn 
+                        display: inline-block
+            &:only-of-type
+                padding-left: 0 
+                padding-right: 0
+                text-align: center
+                width: 100%
+                >.btn 
+                    display: block
+                    margin: 45px auto 0
+            >.btn 
+                max-width: 200px
+
+.flex  
+    display: -webkit-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex    
+
+.container
+    display: block
+    max-width: 1048px
+    margin: 0 auto
+    padding-left: 15px
+    padding-right: 15px
+
+img 
+    max-width: 100%
+
+#wrap
+    min-height: calc(100vh - 46px)
+    padding-bottom: 46px
+    overflow: hidden
+
+.logo 
+    font-family: 'patua_oneregular'
+
+.btn 
+    +border(999px)
+    display: block 
+    +rem(('font-size':13px,'letter-spacing':-.2px))
+    padding: 12px 24px
+    text-align: center
+    >.ico
+        display: inline-block 
+        vertical-align: middle 
+        margin-left: 15px
+        top: -1.5px
+    &.btn-1
+        background-color: $teal-blue
+        color: white 
+        +rem(('font-size':11px,'letter-spacing':-.2px))
+        text-transform: uppercase
+        +shadow(0px,3px,25px,-6px,black)
+    &.btn-2
+        background-color: $robins-egg-blue
+        color: white
+.loading
+    background-color: $marine-blue
+    align-items: center
+    color: white  
+    // @extend .flex
+    display: none 
+    flex-flow: column wrap
+    height: 100% 
+    justify-content: center 
+    left: 0
+    position: fixed 
+    top: 0
+    text-align: center 
+    width: 100%
+    z-index: 1000
+    [class*='lds']
+        display: block
+        &[class*='logo']
+            @extend .logo
+            +rem('font-size', 36px)
+    .lds-roller 
+        display: inline-block
+        position: relative
+        transform: scale(.6)
+        width: 64px
+        height: 64px
+        div 
+            animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite
+            transform-origin: 32px 32px
+            &:after 
+                content: ' '
+                display: block
+                position: absolute
+                width: 6px
+                height: 6px
+                border-radius: 50%
+                background: #fff
+                margin: -3px 0 0 -3px
+            &:nth-child(1) 
+                animation-delay: -0.036s
+                &:after 
+                    top: 50px
+                    left: 50px
+            &:nth-child(2) 
+                animation-delay: -0.072s
+                &:after 
+                    top: 54px
+                    left: 45px
+            &:nth-child(3) 
+                animation-delay: -0.108s
+                &:after 
+                    top: 57px
+                    left: 39px
+            &:nth-child(4) 
+                animation-delay: -0.144s
+                &:after 
+                    top: 58px
+                    left: 32px
+            &:nth-child(5) 
+                animation-delay: -0.18s
+                &:after 
+                    top: 57px
+                    left: 25px
+            &:nth-child(6) 
+                animation-delay: -0.216s
+                &:after 
+                    top: 54px
+                    left: 19px
+            &:nth-child(7) 
+                animation-delay: -0.252s
+                &:after 
+                    top: 50px
+                    left: 14px
+            &:nth-child(8) 
+                animation-delay: -0.288s
+                &:after 
+                    top: 45px
+                    left: 10px   
+h2
+    +rem('font-size', 55px) 
+    +mq(768px, max)
+        +rem('font-size', 7vw)
+        +mq(414px, max)
+            +rem('font-size', 10vw)
+h3
+    +rem('font-size', 40px)   
+    +mq(768px, max)
+        +rem('font-size', 5vw)
+        +mq(414px, max)
+            +rem('font-size', 8vw)
+.title 
+    color: $marine-blue
+    @extend .logo
+.description
+    color: $marine-blue
+    +rem(('font-size':16px, 'line-height':30px, 'letter-spacing':-.2px))
+    margin: 18px 0 30px  
+
+section 
+    +transition(500ms)
+    &:not(:first-of-type):not(:nth-child(2))
+        opacity: 0
+        &.animated
+            opacity: 1
