@@ -1,6 +1,3 @@
-var $magnifying_glass = document.getElementById('magnifying_glass'),
-	$magnifying_glass_inner = document.getElementById('magnifying_glass_inner');
-
 function spinner(string){
     $(".loading").css("display", string);
 }
@@ -64,7 +61,11 @@ $(document).ready(function () {
 	combobox();
 	navigation();
 	faq();
-	new Parallax($magnifying_glass);
+ //    var $magnifying_glass = document.getElementById('magnifying_glass'),
+ //        $magnifying_glass_inner = document.getElementById('magnifying_glass_inner');
+	// new Parallax($magnifying_glass);
+    var scene = document.getElementById('magnifying_glass');
+    var parallaxInstance = new Parallax(scene);
 });
       
       

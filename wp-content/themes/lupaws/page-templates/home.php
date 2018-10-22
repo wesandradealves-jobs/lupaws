@@ -14,7 +14,7 @@
     <?php endif; ?>
     <?php if(get_field('imagem_webdoor', option)) : ?> 
     <div>
-      <div data-relative-input="true" data-depth="0.6" id="magnifying_glass" class="webdoor-detail">
+      <div id="magnifying_glass" class="webdoor-detail">
         <?php if(get_field('imagem_webdoor', option)[0]['imagem']) : ?><img data-depth="0.5" class="magnifying_glass" src="<?php echo get_field('imagem_webdoor', option)[0]['imagem']; ?>" alt="<?php the_field('titulo_webdoor', option); ?>"><?php endif; ?>
         <?php if(get_field('imagem_webdoor', option)[1]['imagem']) : ?><img data-depth="0.3" class="magnifying_glass_inner" src="<?php echo get_field('imagem_webdoor', option)[1]['imagem']; ?>" alt="<?php the_field('titulo_webdoor', option); ?>"><?php endif; ?>
       </div>
