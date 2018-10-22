@@ -9,16 +9,16 @@
     <form id="contact-form" class="contact-form" method="POST">
       <div>
         <span>
-          <input onkeypress="mascara(this,soLetras)" name="nome" placeholder="Qual seu nome?" type="text">
+          <input required="required" onkeypress="mascara(this,soLetras)" name="nome" placeholder="Qual seu nome?" type="text">
         </span>
         <span>
-          <input name="email" placeholder="Qual seu e-mail?" type="email">
+          <input required="required" name="email" placeholder="Qual seu e-mail?" type="email">
         </span>
         <span>
           <input class="telefone" name="telefone" placeholder="E o seu telefone?" type="tel">
         </span>
         <span>
-          <input name="assunto" placeholder="Qual assunto da mensagem?" type="text">
+          <input required="required" name="assunto" placeholder="Qual assunto da mensagem?" type="text">
         </span>
       </div>
       <div>

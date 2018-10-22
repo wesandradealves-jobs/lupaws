@@ -24,46 +24,25 @@ function closeModal(string){
 
 function closeMenu(){
 	$(".tcon-transform").removeClass("tcon-transform");
+    $('.navigation-mobile').removeClass('toggle');
 }
 
 function _mobileNavigation(){
 	$(".tcon").toggleClass("tcon-transform");
+    $('.navigation-mobile').toggleClass('toggle');
 } 
 
-$(document).ready(function () {
-    $( '#contact-form' ).submit(function( event ) {
-        var dataparam = $('#contact-form').serialize();
+$(window).on("resize scroll", function (e) {
+    closeMenu();
+}); 
 
-        $.ajax({
-            type: 'POST',
-            async: true,
-            url: '',
-            data: dataparam,
-            datatype: 'json',
-            cache: true,
-            global: false,
-            beforeSend: function() { 
-                spinner('flex');
-            },
-            success: function(data) {
-                console.log(data);
-            },
-            complete: function() { 
-                spinner('none');
-                $('#contact-form')[0].reset();
-            }
-        }); 
-        event.preventDefault();
-    }); 
+$(document).ready(function () {
     if($('.telefone').length){
         $('.telefone').mask('(00) 0000-0000');
     }
 	combobox();
 	navigation();
 	faq();
- //    var $magnifying_glass = document.getElementById('magnifying_glass'),
- //        $magnifying_glass_inner = document.getElementById('magnifying_glass_inner');
-	// new Parallax($magnifying_glass);
     var scene = document.getElementById('magnifying_glass');
     var parallaxInstance = new Parallax(scene);
 });
