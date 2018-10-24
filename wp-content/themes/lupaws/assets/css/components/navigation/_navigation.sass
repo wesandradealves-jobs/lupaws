@@ -1,9 +1,13 @@
+.tcon-transform
+	position: relative
+	z-index: 101
 .navigation
 	&-mobile
 		background-color: transparentize($marine-blue, .15)
 		align-items: center
 		color: white 
-		// @extend .flex  
+		&.toggle
+			@extend .flex  
 		display: none
 		height: 100%
 		justify-content: center 
